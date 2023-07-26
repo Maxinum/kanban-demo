@@ -13,7 +13,7 @@ Kanban is a powerful project management and workflow visualization tool that hel
 You can try the demo of the Cash Flow Web App <a href="https://superb-buttercream-8748df.netlify.app/" target="_blank">here</a>.
 
 ## Installation
-To run the Cash Flow Web App locally, follow these steps:
+To run the Kanban App locally, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Navigate to the project's root directory.
@@ -27,7 +27,7 @@ Open your web browser and navigate to http://localhost:3000 to access the app.
 
 ## Contributing
 
-If you would like to contribute to the Cash Flow Web App, follow these steps:
+If you would like to contribute to the Kanban App, follow these steps:
 
 1. Fork the repository on GitHub.
 2. Create a new branch with a descriptive name for your feature or bug fix.
