@@ -23,7 +23,7 @@ Copy code
 ### `npm install`
 Start the development server:
 ### `npm run dev`
-Open your web browser and navigate to http://localhost:3000 to access the app.
+Open your web browser and navigate to http://localhost:5173 to access the app.
 
 ## Contributing
 
