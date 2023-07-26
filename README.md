@@ -1,27 +1,41 @@
-# React + TypeScript + Vite
+# Kanban
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Kanban is a powerful project management and workflow visualization tool that helps teams optimize their productivity and workflow efficiency. It allows teams to organize tasks, visualize work progress, and prioritize activities in a highly visual and flexible manner. The Kanban methodology was initially developed by Toyota for their manufacturing process but has been widely adopted in various industries and software development teams.
 
-Currently, two official plugins are available:
+## Features
+- Drag and Drop: Move tasks across different columns to indicate their progress in real-time.
+- Task Management: Add, edit, and delete tasks on the Kanban board to keep track of your team's work.
+- Task Details: Add descriptions, due dates to tasks for more detailed information.
+- Prioritize Tasks: Arrange tasks based on their priority to focus on critical items first.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
+You can try the demo of the Cash Flow Web App <a href="https://superb-buttercream-8748df.netlify.app/" target="_blank">here</a>.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
+To run the Cash Flow Web App locally, follow these steps:
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone the repository to your local machine.
+2. Navigate to the project's root directory.
+3. Install the required dependencies using the package manager of your choice:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Copy code
+### `npm install`
+Start the development server:
+### `npm run dev`
+Open your web browser and navigate to http://localhost:3000 to access the app.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Contributing
+
+If you would like to contribute to the Cash Flow Web App, follow these steps:
+
+1. Fork the repository on GitHub.
+2. Create a new branch with a descriptive name for your feature or bug fix.
+3. Make your changes and commit them with clear commit messages.
+4. Push your changes to your fork.
+5. Create a pull request to the main repository's master branch.
+
+## Contact
+For questions or inquiries, feel free to contact the project maintainers at sales@maxinum.co.
+
+Thank you for using the Cash Flow Web App! We hope it helps you manage your expenses effectively and gain valuable insights into your cash flow. If you encounter any issues or have suggestions for improvements, please let us know. Happy budgeting!
