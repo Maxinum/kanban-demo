@@ -16,19 +16,22 @@ import {
 import { useState } from 'react';
 import { useColumnsStore } from '../../store';
 import classes from './Modal.module.css';
+import ITask from '../../interfaces/ITask';
 
-const BasicUsage = () => {
+const AddModal = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { addTask } = useColumnsStore();
-    const [formData, setFormData] = useState({
-        name: "",
-        date: "2023-07-23",
+    const [formData, setFormData] = useState<ITask & { columnId: string }>({
+        id: "",
+        Task: "",
+        Due_Date: "",
         columnId: "1",
         comment: "",
-        priority: "Medium"
+        priority: "Medium" as "High" | "Medium" | "Low",
+        created_Date: "", 
     });
 
-    const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target;
         setFormData((prevFormData) => ({
             ...prevFormData,
@@ -38,16 +41,23 @@ const BasicUsage = () => {
 
 
     const handleSubmit = () => {
-        const { name, date, columnId } = formData;
+        const { Task, Due_Date, columnId, priority, comment } = formData;
+
+        const currentDate = new Date();
+        const formattedDate = currentDate.toISOString().split("T")[0];
+
         const newTask = {
             id: String(Date.now()),
-            Task: name,
-            Due_Date: date,
+            Task: Task,
+            Due_Date: Due_Date,
+            comment: comment,
+            priority: priority,
+            created_Date: formattedDate,
         };
         addTask(columnId, newTask);
         onClose();
     };
-    const disabled = formData.name.trim() === '';
+    const disabled = formData.Task.trim() === '' && formData.Due_Date.trim() === '';
 
     return (
         <>
@@ -63,8 +73,8 @@ const BasicUsage = () => {
                         <Input
                             id="taskName"
                             onChange={handleChange}
-                            value={formData.name}
-                            name="name"
+                            value={formData.Task}
+                            name="Task"
                             placeholder="Enter task name"
                         />
 
@@ -72,8 +82,8 @@ const BasicUsage = () => {
                         <Input
                             id="dueDate"
                             onChange={handleChange}
-                            value={formData.date}
-                            name="date"
+                            value={formData.Due_Date}
+                            name="Due_Date"
                             placeholder="Select due date"
                             type="date"
                         />
@@ -86,7 +96,7 @@ const BasicUsage = () => {
                             name="priority"
                             placeholder='Select priority'
                         >
-                            <option value='Height'>Height</option>
+                            <option value='High'>High</option>
                             <option value='Medium'>Medium</option>
                             <option value='Low'>Low</option>
 
@@ -111,7 +121,6 @@ const BasicUsage = () => {
                             value={formData.comment}
                             name="comment"
                             placeholder="comment..."
-                            resize={false}
                             rows={4}
                         />
                     </ModalBody>
@@ -125,4 +134,4 @@ const BasicUsage = () => {
     );
 };
 
-export default BasicUsage;
+export default AddModal;

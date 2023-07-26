@@ -16,5 +16,10 @@ textarea {
 }
 
 .chakra-modal__content{
-  margin-top: 20px !important;
+  margin-top: unset !important;
+  margin-bottom: unset !important;
+}
+
+.chakra-modal__content-container{
+  align-items: center !important;
 }

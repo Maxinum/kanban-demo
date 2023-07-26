@@ -11,16 +11,19 @@
     display: flex;
     gap: 2rem;
     width: 100%;
-    min-height: 60vh;
+    overflow: hidden;
+    overflow-x: auto;
+    max-height: 75vh;
 }
 
 .task_list {
     min-height: 100px;
     display: flex;
+    overflow: auto;
     flex-direction: column;
     background: #f3f3f3;
     width: calc(100% / 4);
-    min-width: 320px;
+    min-width: 200px;
     border-radius: 5px;
     padding: 15px 15px;
 }
@@ -46,8 +49,9 @@
 
 .secondary_details {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     font-size: 12px;
     font-weight: 400px;
@@ -58,4 +62,21 @@
     position: absolute;
     right: 1rem;
     top: 1rem;
+}
+
+.modal_container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.modal_container>div {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: start;
+}
+
+.modal {
+    height: 50vh !important;
 }
