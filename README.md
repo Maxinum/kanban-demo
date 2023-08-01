@@ -17,9 +17,8 @@ To run the Kanban App locally, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Navigate to the project's root directory.
-3. Install the required dependencies using the package manager of your choice:
+3. Install the required dependencies:
 
-Copy code
 ### `npm install`
 Start the development server:
 ### `npm run dev`
