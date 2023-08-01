@@ -10,7 +10,7 @@ Kanban is a powerful project management and workflow visualization tool that hel
 
 ## Demo
 
-You can try the demo of the Cash Flow Web App <a href="https://superb-buttercream-8748df.netlify.app/" target="_blank">here</a>.
+You can try the demo of the Kanban <a href="https://superb-buttercream-8748df.netlify.app/" target="_blank">here</a>.
 
 ## Installation
 To run the Kanban App locally, follow these steps:
